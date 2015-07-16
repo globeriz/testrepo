@@ -10,7 +10,7 @@ var mapgen = function(map_name, map_data, map_width)
 		var image = new Image();
 		image.onerror = function () {
 		   this.onerror = null;
-		   this.src = this.src.split('.').pop().pop()+".bmp";
+		   this.src = this.src.split('.')[0]+".bmp";
 		}
 		image.src = mapico_path+a[i]+".png";
 		o.append(image);
