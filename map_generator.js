@@ -1,6 +1,6 @@
 var mapgen = function(map_name, map_data, map_width)
 {
-	map_width = typeof map_width !== 'undefined' ? map_width : 16;
+	map_width = typeof map_width !== 'undefined' ? map_width : 11;
 	mapico_path = './mapico/';
 	$("body").after("<div id='map_"+map_name+"'></div>");
 	var o = $("#map_"+map_name);
@@ -13,6 +13,8 @@ var mapgen = function(map_name, map_data, map_width)
 		   this.src = this.src.split('.')[0]+".bmp";
 		}
 		image.src = mapico_path+a[i]+".png";
+		image.width = 32;
+		image.height = 32;
 		o.append(image);
 		if (i % parseInt(map_width) == 0) o.append("<br />");
 	}
