@@ -63,8 +63,11 @@ var rowGen = function(a)
 	if (!Array.isArray(a))
 		return ("<tr><td>"+a+"</td></tr>");
 	var s = "<tr>";
-	for (var x of a)
-		s += ("<td>"+x+"</td>");
+	for (var i in a)
+		if (i%2 == 0)
+			s += ("<td>"+a[i]+"</td>");
+		else
+			s += ("<td class='editable'>"+a[i]+"</td>");
 	s += "</tr>";
 	return s;
 }
