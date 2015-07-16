@@ -16,7 +16,8 @@ var loadMe = function(){
 	}
 	else
 		f = $("#mting embed");
-
+		f.removeAttr("allowscriptaccess");
+		
 		msg = "Load OK!";
 		flashObj = f;
 		window.flashObj = f;
