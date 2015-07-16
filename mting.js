@@ -53,6 +53,10 @@ var loadMenu = function()
 	setInterval(updateVals, 1000);
 }
 
+var editVal = function(x,u)
+{
+	var v = prompt(x+"=", "");
+}
 
 var btnGenerator = function(f, t)
 {
@@ -63,11 +67,9 @@ var rowGen = function(a)
 	if (!Array.isArray(a))
 		return ("<tr><td>"+a+"</td></tr>");
 	var s = "<tr>";
-	for (var i in a)
-		if (i%2 == 0)
-			s += ("<td>"+a[i]+"</td>");
-		else
-			s += ("<td class='editable'>"+a[i]+"</td>");
+	for (var x of a)
+		s += ("<td>"+x+"</td>");
+	s += "<td><button onclick=\"editVal('"+a[0]+"', '"+a[1]+"')\">Edit</button></td>";
 	s += "</tr>";
 	return s;
 }
