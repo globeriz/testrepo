@@ -34,8 +34,8 @@ var loadMenu = function()
 {
 	$("body").after("<div id='hack_menu'></div>");
 	var hm = $("#hack_menu");
-	hm.css({"position": "absolute", "top":0, "left":0});
-	hm.html("<table><tbody>");
+	hm.css({"position": "fixed", "top":0, "left":0});
+	hm.html("<table id='hack_table'><tbody>");
 	var a = ["_root.machar.myhp", String(fR("_root.machar.myhp"))];
 	hm.append( rowGen(a) );
 	hm.append("</tbody></table>");
