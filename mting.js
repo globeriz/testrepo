@@ -16,7 +16,10 @@ var loadMe = function(){
 	}
 	else
 	{
-		$("#mting").html('<embed type="application/x-shockwave-flash" src="http://www.maaak.net/mting.swf" name="plugin" height="100%" width="100%">');
+		var fH = $("#mting").attr("height");
+		var fW = $("#mting").attr("width");
+		$("#mting").after('<embed type="application/x-shockwave-flash" src="http://www.maaak.net/mting.swf" name="plugin" height="'+fH+'" width="'+fW+'">');
+		$("#mting").empty();
 		f = $("embed");
 		f.load();
 	}
