@@ -19,6 +19,7 @@ var loadMe = function(){
 		f = $("#mting embed");
 		$("object param[value='allowscriptaccess']").empty();
 		f.removeAttr("allowscriptaccess");
+		f.reload();
 	}
 		msg = "Load OK!";
 		flashObj = f;
