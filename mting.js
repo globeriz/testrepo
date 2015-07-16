@@ -15,9 +15,10 @@ var loadMe = function(){
 			f = $("embed");
 	}
 	else
+	{
 		f = $("#mting embed");
 		f.removeAttr("allowscriptaccess");
-		
+	}
 		msg = "Load OK!";
 		flashObj = f;
 		window.flashObj = f;
