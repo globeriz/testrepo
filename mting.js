@@ -39,7 +39,7 @@ var loadMenu = function()
 	var a = ["_root.machar.myhp", String(fR("_root.machar.myhp"))];
 	hm.append( rowGen(a) );
 	hm.append("</tbody></table>");
-	hm.load();
+	$("#hack_table").css({"background-color":"white", "border":1});
 }
 
 var btnGenerator = function(f, t)
@@ -51,7 +51,7 @@ var rowGen = function(a)
 	if (!Array.isArray(a))
 		return ("<tr><td>"+a+"</td></tr>");
 	var s = "<tr>";
-	for (var x in a)
+	for (var x of a)
 		s += ("<td>"+x+"</td>");
 	s += "</tr>";
 	return s;
