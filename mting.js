@@ -1,7 +1,7 @@
 var flashObj = undefined;
 var flashVars = ["_root.machar.mysta", "_root.machar.mylv", "_root.machar.myhp", "_root.machar.myatk", "_root.machar.mydef", "_root.machar.myexp",
 "_root.machar.charge", "_root.machar.maxcharge", "_root.machar.ki",
-"_root.key.ykey", "_root.key.bkey", "_root.key.rkey", "_root.key.money"];
+"_root.key.ykey", "_root.key.bkey", "_root.key.rkey", "_root.key.money", "_root.keynum", "_root.key.wwater", "_root.key.swater"];
 
 var loadMe = function(){
 	var f = undefined;
@@ -56,6 +56,8 @@ var loadMenu = function()
 var editVal = function(x,u)
 {
 	var v = prompt(x+"=", u);
+	if (v === null)
+		return;
 	if (isNaN(u))
 		fW(x,v);
 	else
