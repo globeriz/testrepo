@@ -56,9 +56,10 @@ var loadMenu = function()
 var editVal = function(x,u)
 {
 	var v = prompt(x+"=", u);
-	if (u === '')
-		return;
-	fW(x,parseInt(v));
+	if (isNaN(u))
+		fW(x,v);
+	else
+		fW(x,parseInt(v));
 }
 
 var btnGenerator = function(f, t)
