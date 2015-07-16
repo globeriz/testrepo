@@ -1,4 +1,4 @@
-mapgen = function(map_name, map_data)
+var mapgen = function(map_name, map_data)
 {
   mapico_path = './mapico/';
   $("body").after("<div id='map_"+map_name+"'></div>");
