@@ -35,7 +35,7 @@ var loadMenu = function()
 	var jf = $(flashObj);
 	jf.after("<div id='hack_menu'></div>");
 	var hm = $("hack_menu");
-	hm.css({"position": "absolute", "top":0, "left", "0"});
+	hm.css({"position": "absolute", "top":0, "left": "0"});
 	hm.html("<table><tbody>");
 	var a = ["_root.machar.myhp", String(fR("_root.machar.myhp"))];
 	hm.append( RowGen(a) );
