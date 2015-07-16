@@ -1,4 +1,6 @@
 var flashObj = undefined;
+var flashVars = ["_root.machar.mylv", "_root.machar.myhp", "_root.machar.myatk", "_root.machar.mydef", "_root.machar.myexp",
+"_root.key.ykey", "_root.key.bkey", "_root.key.rkey", "_root.key.money"];
 
 var loadMe = function(){
 	var f = undefined;
@@ -34,8 +36,8 @@ var updateVals = function()
 {
 	var ht = $("#hack_table");
 	ht.empty();
-	var a = ["_root.machar.myhp", String(fR("_root.machar.myhp"))];
-	ht.append( rowGen(a) );
+	for (var x of flashVars)
+		ht.append( rowGen([x, String(fR(x))]) );
 }
 
 var loadMenu = function()
@@ -45,8 +47,8 @@ var loadMenu = function()
 	hm.css({"position": "fixed", "top":0, "left":0, "background-color":"white"});
 	hm.html("<table id='hack_table'></table>");
 	var ht = $("#hack_table");
-	var a = ["_root.machar.myhp", String(fR("_root.machar.myhp"))];
-	ht.append( rowGen(a) );
+	for (var x of flashVars)
+		ht.append( rowGen([x, String(fR(x))]) );
 	setInterval(updateVals, 1000);
 }
 
