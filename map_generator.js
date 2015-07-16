@@ -8,9 +8,8 @@ var mapgen = function(map_name, map_data)
 	{
 		var image = new Image();
 		image.onerror = function () {
-		   console.error("Cannot load image");
-		   //do something else...
-		   image.src = mapico_path+x+".bmp";
+		   this.onerror = null;
+		   this.src = mapico_path+x+".bmp";
 		}
 		image.src = mapico_path+x+".png";
 		o.append(image);
