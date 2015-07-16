@@ -16,9 +16,8 @@ var loadMe = function(){
 	}
 	else
 	{
-		f = $("#mting embed");
-		$("object param[value='allowScriptAccess']").empty();
-		f.removeAttr("allowscriptaccess");
+		$("#mting").html('<embed type="application/x-shockwave-flash" src="http://www.maaak.net/mting.swf" name="plugin" height="100%" width="100%">');
+		f = $("embed");
 		f.load();
 	}
 		msg = "Load OK!";
