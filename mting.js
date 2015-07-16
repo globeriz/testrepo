@@ -39,8 +39,17 @@ var loadMenu = function()
 	var a = ["_root.machar.myhp", String(fR("_root.machar.myhp"))];
 	hm.append( rowGen(a) );
 	hm.append("</tbody></table>");
-	$("#hack_table").css({"background-color":"white", "border":1});
+	
+	$("<style>")
+	    .prop("type", "text/css")
+	    .html("\
+	    #hack_table td {\
+	        background-color: white;\
+	    }")
+	    .appendTo("head");
 }
+
+
 
 var btnGenerator = function(f, t)
 {
