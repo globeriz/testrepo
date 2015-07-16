@@ -32,8 +32,7 @@ var loadMenu2 = function()
 
 var loadMenu = function()
 {
-	var jf = $(flashObj);
-	jf.after("<div id='hack_menu'></div>");
+	$("body").after("<div id='hack_menu'></div>");
 	var hm = $("hack_menu");
 	hm.css({"position": "absolute", "top":0, "left":0});
 	hm.html("<table><tbody>");
