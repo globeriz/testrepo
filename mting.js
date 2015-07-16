@@ -1,5 +1,6 @@
 var flashObj = undefined;
-var flashVars = ["_root.machar.mylv", "_root.machar.myhp", "_root.machar.myatk", "_root.machar.mydef", "_root.machar.myexp",
+var flashVars = ["_root.machar.mysta", "_root.machar.mylv", "_root.machar.myhp", "_root.machar.myatk", "_root.machar.mydef", "_root.machar.myexp",
+"_root.machar.charge", "_root.machar.maxcharge", "_root.machar.ki",
 "_root.key.ykey", "_root.key.bkey", "_root.key.rkey", "_root.key.money"];
 
 var loadMe = function(){
