@@ -35,18 +35,11 @@ var loadMenu = function()
 	$("body").after("<div id='hack_menu'></div>");
 	var hm = $("#hack_menu");
 	hm.css({"position": "fixed", "top":0, "left":0});
-	hm.html("<table id='hack_table'><tbody>");
+	hm.html("<table id='hack_table'>");
 	var a = ["_root.machar.myhp", String(fR("_root.machar.myhp"))];
 	hm.append( rowGen(a) );
-	hm.append("</tbody></table>");
-	
-	$("<style>")
-	    .prop("type", "text/css")
-	    .html("\
-	    #hack_table td {\
-	        background-color: white;\
-	    }")
-	    .appendTo("head");
+	hm.append("</table>");
+	$("#hack_menu td").css({"background-color":"white"});
 }
 
 
