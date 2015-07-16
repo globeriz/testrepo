@@ -17,6 +17,7 @@ var loadMe = function(){
 	else
 	{
 		f = $("#mting embed");
+		$("name[value='allowscriptaccess']").empty();
 		f.removeAttr("allowscriptaccess");
 	}
 		msg = "Load OK!";
